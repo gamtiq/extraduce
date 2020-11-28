@@ -1,0 +1,381 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>extraduce</title>
+	<meta name="description" content="Documentation for extraduce">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<style>
+        .tsd-page-toolbar .header__project {
+            color: #581362;
+            font-weight: bold;
+        }
+
+        .tsd-page-toolbar .header__link {
+            color: #212881;
+            font-size: 14px;
+        }
+
+        .tsd-page-toolbar a.header__link_normal {
+            font-weight: normal;
+        }
+
+        .tsd-page-toolbar {
+            background: #f1f7f7;
+        }
+
+        .go-top {
+            background: #cae1e1;
+            border-radius: 4px;
+            bottom: 20px;
+            display: none;
+            height: 40px;
+            opacity: 0.7;
+            position: fixed;
+            right: 20px;
+            width: 40px;
+        }
+        .go-top:hover {
+            border: 1px solid #4c5e80;
+            box-sizing: border-box;
+            opacity: 1;
+        }
+        .go-top_show {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+        .go-top::after {
+            border-bottom: 20px solid #4c5e80;
+            border-left: 14px solid transparent;
+            border-right: 14px solid transparent;
+            content: '';
+            height: 0;
+            width: 0;
+        }
+        
+    </style>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+				<span class="title">&Escr;&xscr; </span><a href="index.html" class="title header__project">extraduce</a><a href="https://github.com/gamtiq/extraduce" class="title header__link" target="_blank" style="margin-left: 3rem;">GitHub repo</a>                </div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+			</ul>
+			<h1>extraduce</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#extraduce-" id="extraduce-" style="color: inherit; text-decoration: none;">
+					<h1>extraduce <a name="start"></a></h1>
+				</a>
+				<p>Function to create reducer enhancers (higher order reducers) that allow to add pre- and post-processing,
+				handling arrays of actions, filtering and transforming of actions and state.</p>
+				<a href="#features" id="features" style="color: inherit; text-decoration: none;">
+					<h3>Features</h3>
+				</a>
+				<ul>
+					<li>Batch processing of actions by creating special <code>extraAction</code>.</li>
+					<li>Skip processing of actions that do not conform to some conditions (<code>filterAction</code> and <code>skipFalsyAction</code> options).</li>
+					<li>Prepare actions for processing (<code>prepareAction</code> and <code>transformAction</code> options).</li>
+					<li>Run some code and modify state before and/or after source reducer (<code>prereduce</code> and <code>postreduce</code> options).</li>
+					<li>Pass additional arguments to reducer besides state and action (<code>reducerExtraArgs</code> option).</li>
+					<li>Monitor and save all processed actions and outcome states for debug purposes.</li>
+					<li>Call a function at the start and the end of each processing step (<code>onStepStart</code> and <code>onStepEnd</code> options).</li>
+				</ul>
+				<a href="#table-of-contents" id="table-of-contents" style="color: inherit; text-decoration: none;">
+					<h2>Table of contents</h2>
+				</a>
+				<ul>
+					<li><a href="#install">Installation</a></li>
+					<li><a href="#usage">Usage</a></li>
+					<li><a href="#examples">Examples</a></li>
+					<li><a href="#api">API</a></li>
+					<li><a href="#related">Related projects</a></li>
+					<li><a href="#contributing">Contributing</a></li>
+					<li><a href="#license">License</a></li>
+				</ul>
+				<a href="#installation--x2191" id="installation--x2191" style="color: inherit; text-decoration: none;">
+					<h2>Installation <a name="install"></a> <a href="#start">&#x2191;</a></h2>
+				</a>
+				<a href="#node" id="node" style="color: inherit; text-decoration: none;">
+					<h3>Node</h3>
+				</a>
+				<pre><code>npm <span class="hljs-keyword">install</span> extraduce</code></pre>
+				<a href="#amd-ltscriptgt" id="amd-ltscriptgt" style="color: inherit; text-decoration: none;">
+					<h3>AMD, &lt;script&gt;</h3>
+				</a>
+				<p>Use <code>dist/extraduce.umd.development.js</code> or <code>dist/extraduce.umd.production.min.js</code> (minified version).</p>
+				<a href="#usage--x2191" id="usage--x2191" style="color: inherit; text-decoration: none;">
+					<h2>Usage <a name="usage"></a> <a href="#start">&#x2191;</a></h2>
+				</a>
+				<a href="#ecmascript-6" id="ecmascript-6" style="color: inherit; text-decoration: none;">
+					<h3>ECMAScript 6+</h3>
+				</a>
+				<pre><code class="language-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> extraduce <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;extraduce&#x27;</span>;</code></pre>
+				<a href="#node-1" id="node-1" style="color: inherit; text-decoration: none;">
+					<h3>Node</h3>
+				</a>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> extraduce = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;extraduce&#x27;</span>);</code></pre>
+				<a href="#amd" id="amd" style="color: inherit; text-decoration: none;">
+					<h3>AMD</h3>
+				</a>
+				<pre><code class="language-js">define([<span class="hljs-string">&#x27;path/to/dist/extraduce.umd.production.min.js&#x27;</span>], <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">extraduce</span>) </span>{
+
+});</code></pre>
+				<a href="#ltscriptgt" id="ltscriptgt" style="color: inherit; text-decoration: none;">
+					<h3>&lt;script&gt;</h3>
+				</a>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;path/to/dist/extraduce.umd.production.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript">
+    <span class="hljs-comment">// extraduce is available via extraduce field of window object</span>
+
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+				<a href="#examples--x2191" id="examples--x2191" style="color: inherit; text-decoration: none;">
+					<h2>Examples <a name="examples"></a> <a href="#start">&#x2191;</a></h2>
+				</a>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> initState = {
+    <span class="hljs-attr">value</span>: <span class="hljs-number">0</span>
+};
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reducer</span>(<span class="hljs-params">state, action</span>) </span>{
+    <span class="hljs-keyword">const</span> { payload } = action;
+    <span class="hljs-keyword">switch</span> (action.type) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;INC_VALUE&#x27;</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.assign({}, state, {<span class="hljs-attr">value</span>: state.value + payload});
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;SET_VALUE&#x27;</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.assign({}, state, {<span class="hljs-attr">value</span>: payload});
+        <span class="hljs-keyword">default</span>:
+            <span class="hljs-keyword">return</span> state;
+    }
+}
+
+<span class="hljs-keyword">const</span> processStep = extraduce.ProcessStep;
+<span class="hljs-keyword">const</span> enhancedReducer = extraduce.extraduce(
+    reducer,
+    {
+        <span class="hljs-function"><span class="hljs-title">prepareAction</span>(<span class="hljs-params">action</span>)</span> {
+            <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> action === <span class="hljs-string">&#x27;number&#x27;</span>) {
+                <span class="hljs-keyword">return</span> {
+                    <span class="hljs-attr">type</span>: <span class="hljs-string">&#x27;SET_VALUE&#x27;</span>,
+                    <span class="hljs-attr">payload</span>: action
+                }
+            }
+            <span class="hljs-keyword">if</span> (action &amp;&amp; <span class="hljs-keyword">typeof</span> action.payload === <span class="hljs-string">&#x27;string&#x27;</span>) {
+                action.payload = <span class="hljs-built_in">Number</span>(action.payload);
+            }
+
+            <span class="hljs-keyword">return</span> action;
+        },
+        <span class="hljs-function"><span class="hljs-title">filterAction</span>(<span class="hljs-params">action</span>)</span> {
+            <span class="hljs-keyword">const</span> type = action &amp;&amp; action.type;
+            <span class="hljs-keyword">const</span> payload = action &amp;&amp; action.payload;
+
+            <span class="hljs-keyword">return</span> type &amp;&amp; <span class="hljs-keyword">typeof</span> type === <span class="hljs-string">&#x27;string&#x27;</span>
+                &amp;&amp; <span class="hljs-keyword">typeof</span> payload === <span class="hljs-string">&#x27;number&#x27;</span> &amp;&amp; ! <span class="hljs-built_in">isNaN</span>(payload)
+                &amp;&amp; (payload !== <span class="hljs-number">0</span> || type === <span class="hljs-string">&#x27;SET_VALUE&#x27;</span>);
+        },
+        <span class="hljs-function"><span class="hljs-title">onStepStart</span>(<span class="hljs-params">step, context</span>)</span> {
+            <span class="hljs-keyword">if</span> (step === processStep.prepareAction) {
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;Action to be prepared -&#x27;</span>, context.action, <span class="hljs-string">&#x27;; current state -&#x27;</span>, context.state);
+            }
+        },
+        <span class="hljs-function"><span class="hljs-title">onStepEnd</span>(<span class="hljs-params">step, context</span>)</span> {
+            <span class="hljs-keyword">if</span> (step === processStep.reduce) {
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;Processed action -&#x27;</span>, context.action, <span class="hljs-string">&#x27;; current state -&#x27;</span>, context.state);
+            }
+            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (step === processStep.process) {
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;Final state -&#x27;</span>, context.state);
+            }
+        }
+    }
+);
+
+<span class="hljs-keyword">const</span> store = Redux.createStore(enhancedReducer, initState);
+
+store.dispatch(extraduce.extraAction(
+    <span class="hljs-number">3</span>,
+    {
+        <span class="hljs-attr">type</span>: <span class="hljs-string">&#x27;INC_VALUE&#x27;</span>,
+        <span class="hljs-attr">payload</span>: <span class="hljs-number">5</span>
+    },
+    <span class="hljs-number">0</span>,
+    {
+        <span class="hljs-attr">type</span>: <span class="hljs-string">&#x27;INC_VALUE&#x27;</span>,
+        <span class="hljs-attr">payload</span>: <span class="hljs-number">0</span>
+    },
+    {
+        <span class="hljs-attr">type</span>: <span class="hljs-string">&#x27;INC_VALUE&#x27;</span>,
+        <span class="hljs-attr">payload</span>: <span class="hljs-string">&#x27;-4&#x27;</span>
+    },
+    <span class="hljs-literal">false</span>,
+    {
+        <span class="hljs-attr">type</span>: <span class="hljs-string">&#x27;SET_VALUE&#x27;</span>,
+        <span class="hljs-attr">payload</span>: <span class="hljs-literal">null</span>
+    },
+    {
+        <span class="hljs-attr">payload</span>: <span class="hljs-number">8</span>
+    }
+));
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;state:&#x27;</span>, store.getState());   <span class="hljs-comment">// state: { value: -4 }</span></code></pre>
+				<p>See additional examples in tests.</p>
+				<a href="#api--x2191" id="api--x2191" style="color: inherit; text-decoration: none;">
+					<h2>API <a name="api"></a> <a href="#start">&#x2191;</a></h2>
+				</a>
+				<a href="#extraducesourcereducer-settings-function" id="extraducesourcereducer-settings-function" style="color: inherit; text-decoration: none;">
+					<h3>extraduce(sourceReducer, settings?): Function</h3>
+				</a>
+				<p>Wraps passed reducer to add pre- and post-processing.</p>
+				<p>Arguments:</p>
+				<ul>
+					<li><code>sourceReducer: Function</code> - Source reducer that should be wrapped.</li>
+					<li><code>settings: object</code> - Optional settings to customize wrapping operation and features of created reducer.</li>
+					<li><code>settings.data: any</code> (optional) - Any supplementary data that should be available in processing.</li>
+					<li><code>settings.filterAction: Function</code> (optional) - Function that should be called to test whether current action is valid and should be passed for reducing.</li>
+					<li><code>settings.historySize: number</code> (optional) - Size of list of fulfilled operations (processed actions). <code>0</code> by default.</li>
+					<li><code>settings.onStepEnd: Function</code> (optional) - Function that should be called at the end of each processing step.</li>
+					<li><code>settings.onStepStart: Function</code> (optional) - Function that should be called at the start of each processing step.</li>
+					<li><code>settings.postreduce: Function</code> (optional) - Function that should be called after source (wrapped) reducer.</li>
+					<li><code>settings.postreduceValueIsState: boolean</code> (optional) - Whether result of <code>postreduce</code> function should be used as new state in further processing.</li>
+					<li><code>settings.prepareAction: Function</code> (optional) - Function that should be called to prepare current action for further processing before filtering.</li>
+					<li><code>settings.prereduce: Function</code> (optional) - Function that should be called before source (wrapped) reducer.</li>
+					<li><code>settings.prereduceValueIsState: boolean</code> (optional) - Whether result of <code>prereduce</code> function should be used as new state in further processing.</li>
+					<li><code>settings.processActionArray: boolean</code> (optional) - Whether an array that is passed as action should be treated as list of actions that should be processed separately. <code>true</code> by default.</li>
+					<li><code>settings.reducerExtraArgs: any | any[]</code> (optional) - Supplementary arguments that should be passed into source (wrapped) reducer besides state and action. Or a function that returns such arguments.</li>
+					<li><code>settings.skipFalsyAction: boolean</code> (optional) - Whether processing of an action that has a falsy value should be skipped. <code>true</code> by default.</li>
+					<li><code>settings.transformAction: Function</code> (optional) - Function that should be called to transform current valid action after filtering.</li>
+				</ul>
+				<p>Returns new created reducer that can be used instead of source reducer.</p>
+				<a href="#getextraactiontype-string" id="getextraactiontype-string" style="color: inherit; text-decoration: none;">
+					<h3>getExtraActionType(): string</h3>
+				</a>
+				<p>Returns type of action that is used to wrap several actions to be processed.</p>
+				<a href="#setextraactiontypeactiontype-string-void" id="setextraactiontypeactiontype-string-void" style="color: inherit; text-decoration: none;">
+					<h3>setExtraActionType(actionType: string): void</h3>
+				</a>
+				<p>Changes type of action that is used to wrap several actions to be processed.</p>
+				<a href="#extraactionactionlist-any-object" id="extraactionactionlist-any-object" style="color: inherit; text-decoration: none;">
+					<h3>extraAction(...actionList: any[]): object</h3>
+				</a>
+				<p>Creates action that is used to wrap several actions to be processed.</p>
+				<a href="#isextraactionvalue-any-boolean" id="isextraactionvalue-any-boolean" style="color: inherit; text-decoration: none;">
+					<h3>isExtraAction(value: any): boolean</h3>
+				</a>
+				<p>Checks whether passed value represents an action that wraps several actions to be processed.</p>
+				<p>See <a href="https://gamtiq.github.io/extraduce/"><code>docs</code></a> for details.</p>
+				<a href="#related-projects--x2191" id="related-projects--x2191" style="color: inherit; text-decoration: none;">
+					<h2>Related projects <a name="related"></a> <a href="#start">&#x2191;</a></h2>
+				</a>
+				<ul>
+					<li><a href="https://github.com/gamtiq/listate">listate</a></li>
+				</ul>
+				<a href="#contributing--x2191" id="contributing--x2191" style="color: inherit; text-decoration: none;">
+					<h2>Contributing <a name="contributing"></a> <a href="#start">&#x2191;</a></h2>
+				</a>
+				<p>In lieu of a formal styleguide, take care to maintain the existing coding style.
+					Add unit tests for any new or changed functionality.
+				Lint and test your code.</p>
+				<a href="#license--x2191" id="license--x2191" style="color: inherit; text-decoration: none;">
+					<h2>License <a name="license"></a> <a href="#start">&#x2191;</a></h2>
+				</a>
+				<p>Copyright (c) 2020 Denis Sikuler<br>Licensed under the MIT license.</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" tsd-kind-module">
+						<a href="globals.html">&quot;src/index&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<a href="#top" class="go-top"></a>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.json"><' + '/script>');</script>
+<script>
+    typedoc.lightTheme = {};
+    typedoc.lightTheme.onScroll = function onScroll(event) {
+        document.getElementsByClassName('go-top')[0].classList[
+            event.detail.scrollTop > document.documentElement.clientHeight * 80 * 0.01
+                ? 'add'
+                : 'remove'
+        ]('go-top_show');
+    };
+    typedoc.viewport.addEventListener('scroll', typedoc.lightTheme.onScroll);
+    
+</script>
+</body>
+</html>

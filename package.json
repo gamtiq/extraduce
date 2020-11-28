@@ -1,0 +1,64 @@
+{
+  "name": "extraduce",
+  "description": "Function to create reducer enhancers (higher order reducers) that allow to add pre- and post-processing, handling arrays of actions, filtering and transforming of actions and state.",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "module": "dist/extraduce.esm.js",
+  "browser": "dist/extraduce.umd.production.min.js",
+  "unpkg": "dist/extraduce.umd.development.js",
+  "typings": "dist/index.d.ts",
+  "keywords": [
+    "reducer",
+    "enhancer",
+    "higher",
+    "order",
+    "process",
+    "processing",
+    "preprocessing",
+    "postprocessing",
+    "handle",
+    "handling",
+    "action",
+    "array",
+    "prepare",
+    "filter",
+    "transform",
+    "state",
+    "prereduce",
+    "postreduce",
+    "history"
+  ],
+  "author": "Denis Sikuler",
+  "homepage": "https://github.com/gamtiq/extraduce",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gamtiq/extraduce.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gamtiq/extraduce/issues"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build --format cjs,esm,umd",
+    "test": "tsdx test",
+    "cover": "tsdx test --coverage --coverageReporters=text --coverageReporters=html",
+    "lint": "eslint --cache --max-warnings 0 \"{src,test}/**/*.ts\"",
+    "doc": "typedoc --options typedoc-conf.js --out docs ./src",
+    "check": "npm run lint && npm test",
+    "all": "npm run check && npm run build && npm run doc"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.8.2",
+    "@typescript-eslint/parser": "^4.8.2",
+    "eslint": "^7.14.0",
+    "eslint-config-ts-guard": "^1.4.0",
+    "husky": "^4.3.0",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.0.3",
+    "typedoc": "^0.19.2",
+    "typedoc-light-theme": "^1.0.1",
+    "typescript": "^3.9.7"
+  }
+}
