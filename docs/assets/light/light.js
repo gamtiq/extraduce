@@ -1,0 +1,29 @@
+(function(window) {
+    function throttle(func, wait) {
+        var lastCallTime = new Date().getTime();
+
+        return function() {
+            var time = new Date().getTime();
+            if (lastCallTime + wait < time) {
+                lastCallTime = time;
+                func.apply(this, arguments);
+            }
+        };
+    }
+
+    function onScroll() {
+        var goTop = document.getElementsByClassName('go-top')[0];
+        if (goTop) {
+            goTop.classList[
+                window.scrollY > document.documentElement.clientHeight * 80 * 0.01
+                    ? 'add'
+                    : 'remove'
+            ]('go-top_show');
+    
+        }
+    }
+
+    window.addEventListener('scroll', throttle(onScroll, 50));
+})(window);
+
+

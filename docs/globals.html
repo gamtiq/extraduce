@@ -7,56 +7,7 @@
 	<meta name="description" content="Documentation for extraduce">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
-	<style>
-        .tsd-page-toolbar .header__project {
-            color: #581362;
-            font-weight: bold;
-        }
-
-        .tsd-page-toolbar .header__link {
-            color: #212881;
-            font-size: 14px;
-        }
-
-        .tsd-page-toolbar a.header__link_normal {
-            font-weight: normal;
-        }
-
-        .tsd-page-toolbar {
-            background: #f1f7f7;
-        }
-
-        .go-top {
-            background: #cae1e1;
-            border-radius: 4px;
-            bottom: 20px;
-            display: none;
-            height: 40px;
-            opacity: 0.7;
-            position: fixed;
-            right: 20px;
-            width: 40px;
-        }
-        .go-top:hover {
-            border: 1px solid #4c5e80;
-            box-sizing: border-box;
-            opacity: 1;
-        }
-        .go-top_show {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-        .go-top::after {
-            border-bottom: 20px solid #4c5e80;
-            border-left: 14px solid transparent;
-            border-right: 14px solid transparent;
-            content: '';
-            height: 0;
-            width: 0;
-        }
-        
-    </style>
+	<link rel="stylesheet" href="assets/light/light.css">
 </head>
 <body>
 <header>
@@ -165,7 +116,7 @@
 					<div class="tsd-signature tsd-kind-icon">Action<wbr>Transformer&lt;S, A, EA&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>action<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">EA</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">EA</span><span class="tsd-signature-symbol">[]</span>, data<span class="tsd-signature-symbol">: </span><a href="interfaces/_src_index_.processdata.html" class="tsd-signature-type">ProcessData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">EA</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>action<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">EA</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">EA</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/index.ts:139</li>
+							<li>Defined in <a href="https://github.com/gamtiq/extraduce/blob/main/src/index.ts#L139">src/index.ts:139</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -187,7 +138,7 @@
 					<div class="tsd-signature tsd-kind-icon">Data<wbr>Handler&lt;S, A, EA&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>state<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span>, action<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">[]</span>, data<span class="tsd-signature-symbol">: </span><a href="interfaces/_src_index_.processdata.html" class="tsd-signature-type">ProcessData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">EA</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>state<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span>, action<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>state<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><a href="globals.html#returnunknown" class="tsd-signature-type">ReturnUnknown</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/index.ts:141</li>
+							<li>Defined in <a href="https://github.com/gamtiq/extraduce/blob/main/src/index.ts#L141">src/index.ts:141</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -209,7 +160,7 @@
 					<div class="tsd-signature tsd-kind-icon">Filter<wbr>Action&lt;S, A, EA&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>action<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">EA</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">EA</span><span class="tsd-signature-symbol">[]</span>, data<span class="tsd-signature-symbol">: </span><a href="interfaces/_src_index_.processdata.html" class="tsd-signature-type">ProcessData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">EA</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>action<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">EA</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">EA</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/index.ts:143</li>
+							<li>Defined in <a href="https://github.com/gamtiq/extraduce/blob/main/src/index.ts#L143">src/index.ts:143</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -231,7 +182,7 @@
 					<div class="tsd-signature tsd-kind-icon">Get<wbr>Reducer<wbr>Extra<wbr>Args&lt;S, A, EA&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><a href="interfaces/_src_index_.processdata.html" class="tsd-signature-type">ProcessData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">EA</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><a href="globals.html#returnunknown" class="tsd-signature-type">ReturnUnknown</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/index.ts:145</li>
+							<li>Defined in <a href="https://github.com/gamtiq/extraduce/blob/main/src/index.ts#L145">src/index.ts:145</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -253,7 +204,7 @@
 					<div class="tsd-signature tsd-kind-icon">Process<wbr>Context&lt;S, A, EA&gt;<span class="tsd-signature-symbol">:</span> <a href="interfaces/_src_index_.baseprocessdata.html" class="tsd-signature-type">BaseProcessData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">EA</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="interfaces/_src_index_.processdata.html" class="tsd-signature-type">ProcessData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">EA</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/index.ts:137</li>
+							<li>Defined in <a href="https://github.com/gamtiq/extraduce/blob/main/src/index.ts#L137">src/index.ts:137</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -275,7 +226,7 @@
 					<div class="tsd-signature tsd-kind-icon">Processing<wbr>Data<wbr>Field<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"step"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"stepEnd"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"stepSet"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"stepStart"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"validAction"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/index.ts:127</li>
+							<li>Defined in <a href="https://github.com/gamtiq/extraduce/blob/main/src/index.ts#L127">src/index.ts:127</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -285,7 +236,7 @@
 					<div class="tsd-signature tsd-kind-icon">Reducer&lt;S, A, R&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>state<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span>, action<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span>, <span class="tsd-signature-symbol">...</span>extraArgs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">R</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/index.ts:81</li>
+							<li>Defined in <a href="https://github.com/gamtiq/extraduce/blob/main/src/index.ts#L81">src/index.ts:81</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -334,7 +285,7 @@
 					<div class="tsd-signature tsd-kind-icon">Return<wbr>Unknown<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">unknown</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/index.ts:135</li>
+							<li>Defined in <a href="https://github.com/gamtiq/extraduce/blob/main/src/index.ts#L135">src/index.ts:135</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -359,7 +310,7 @@
 					<div class="tsd-signature tsd-kind-icon">Step<wbr>Handler&lt;S, A, EA&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>step<span class="tsd-signature-symbol">: </span><a href="enums/_src_index_.processstep.html" class="tsd-signature-type">ProcessStep</a>, data<span class="tsd-signature-symbol">: </span><a href="globals.html#processcontext" class="tsd-signature-type">ProcessContext</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">EA</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>step<span class="tsd-signature-symbol">: </span><a href="enums/_src_index_.processstep.html" class="tsd-signature-type">ProcessStep</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><a href="globals.html#returnunknown" class="tsd-signature-type">ReturnUnknown</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/index.ts:147</li>
+							<li>Defined in <a href="https://github.com/gamtiq/extraduce/blob/main/src/index.ts#L147">src/index.ts:147</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -388,7 +339,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/index.ts:36</li>
+									<li>Defined in <a href="https://github.com/gamtiq/extraduce/blob/main/src/index.ts#L36">src/index.ts:36</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -429,7 +380,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/index.ts:234</li>
+									<li>Defined in <a href="https://github.com/gamtiq/extraduce/blob/main/src/index.ts#L234">src/index.ts:234</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -479,7 +430,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/index.ts:9</li>
+									<li>Defined in <a href="https://github.com/gamtiq/extraduce/blob/main/src/index.ts#L9">src/index.ts:9</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -502,7 +453,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/index.ts:59</li>
+									<li>Defined in <a href="https://github.com/gamtiq/extraduce/blob/main/src/index.ts#L59">src/index.ts:59</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -543,7 +494,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/index.ts:19</li>
+									<li>Defined in <a href="https://github.com/gamtiq/extraduce/blob/main/src/index.ts#L19">src/index.ts:19</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -667,17 +618,6 @@
 <a href="#top" class="go-top"></a>
 <script src="assets/js/main.js"></script>
 <script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.json"><' + '/script>');</script>
-<script>
-    typedoc.lightTheme = {};
-    typedoc.lightTheme.onScroll = function onScroll(event) {
-        document.getElementsByClassName('go-top')[0].classList[
-            event.detail.scrollTop > document.documentElement.clientHeight * 80 * 0.01
-                ? 'add'
-                : 'remove'
-        ]('go-top_show');
-    };
-    typedoc.viewport.addEventListener('scroll', typedoc.lightTheme.onScroll);
-    
-</script>
+<script src="assets/light/light.js"></script>
 </body>
 </html>
